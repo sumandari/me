@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={qrcode} className="App-logo" alt="logo" />
+        <a href="https://sumandari.github.io"><img src={qrcode} className="App-logo" alt="logo" /></a>
         <span className='App-header-text'><span className="App-halo">Hej!</span><img src={coffee} className='App-header-img' alt="coffee"/></span>
       </header>
       <footer className='App-footer'>
