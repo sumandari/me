@@ -1,22 +1,22 @@
-import coffee from './coffee.png';
-import qrcode from './qrcode.png';
-import './App.css';
 
-function App() {
+import Container from 'react-bootstrap/Container';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+
+import HomePage from './pages/HomePage';
+import LandingPage from './pages/LandingPage';
+import BlogPage from './pages/BlogPage';
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a href="https://github.com/sumandari"><img src={qrcode} className="App-logo" alt="logo" /></a>
-        <span className='App-header-text'><span className="App-halo">Hej!</span><img src={coffee} className='App-header-img' alt="coffee"/></span>
-      </header>
-      <footer className='App-footer'>
-        <small className='App-footer-text'>
-          This site is under development. Visit <a href="https://sumandari.github.io">older version</a>. <br />
-          Built with ReactJs. Icon by <a href="https://freeicons.io/profile/722"> Fasil </a> on <a href="https://freeicons.io"> freeicons.io </a>
-        </small>
-      </footer>
-    </div>
+    <Container fluid className='App'>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </BrowserRouter>
+    </Container>
   );
 }
-
-export default App;
