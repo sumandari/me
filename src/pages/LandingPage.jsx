@@ -42,7 +42,7 @@ export default function LandingPage() {
         I'm bored. Skip!
       </Button>
 
-      <HomeIcon />
+      <HomeIcon me />
     </div>
   );
 }
